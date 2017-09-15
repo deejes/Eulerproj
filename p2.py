@@ -10,3 +10,14 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 
 '''
+
+
+fibs = [1,2]
+
+while True:
+    fibs.append(fibs[-1]+fibs[-2])
+    if fibs[-1]>4000000:
+        del fibs[-1]
+        break
+
+print (sum([x for x in fibs if x%2 == 0]))
