@@ -1,2 +1,3 @@
-# Eulerproj
-Solutions for Eulers Prj problems
+# Euler_project
+Solutions for Eulers Project problems
+https://projecteuler.net
