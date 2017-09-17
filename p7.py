@@ -12,17 +12,14 @@ def is_prime(x):
         if x % y == 0:
             return False
     return True
-#    l = [True for x in range(target)]
-#    print (l)
 
 primes = []
 x = 2
+
 while len(primes) !=10001:
     if is_prime(x):
         primes.append(x)
         print (x,len(primes))
     x +=1
 
-
-#print (is_prime(6))
 print (primes[-1])
