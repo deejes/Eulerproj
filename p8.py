@@ -2,8 +2,6 @@
 #Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
 
-
-
 num = """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -25,4 +23,39 @@ num = """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
-print (int(num))
+num = num.replace('\n', '')
+
+
+def digit_product(number):
+    product = 1
+    for x in str(number):
+        product = product * int(x)
+    return product
+
+
+print (digit_product(123))
+
+
+
+y = 13
+nums = []
+
+while y < len(num):
+    nums.append(int(num[y-13:y]))
+    y+=1
+
+
+max = 0
+
+for x in nums:
+    if digit_product(x) > max:
+        max = digit_product(x)
+
+print (max)
+
+
+
+
+
+
+#print (nums)
