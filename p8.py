@@ -1,5 +1,5 @@
-#The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
-#Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+# The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
+# Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
 
 num = """73167176531330624919225119674426574742355349194934
@@ -33,16 +33,15 @@ def digit_product(number):
     return product
 
 
-print (digit_product(123))
-
+print(digit_product(123))
 
 
 y = 13
 nums = []
 
 while y < len(num):
-    nums.append(int(num[y-13:y]))
-    y+=1
+    nums.append(int(num[y - 13:y]))
+    y += 1
 
 
 max = 0
@@ -51,11 +50,7 @@ for x in nums:
     if digit_product(x) > max:
         max = digit_product(x)
 
-print (max)
-
-
-
-
+print(max)
 
 
 #print (nums)
