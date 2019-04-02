@@ -7,7 +7,7 @@ def is_prime(x):
         return False
     elif x == 2 or x == 3:
         return True
-    for y in range(2, int(x**(1 / 2)) + 1):
+    for y in range(2, int(x**(1 / 2.0)) + 1):
         if x % y == 0:
             return False
     return True
@@ -19,7 +19,6 @@ x = 2
 while len(primes) != 10001:
     if is_prime(x):
         primes.append(x)
-        print(x, len(primes))
     x += 1
 
 print(primes[-1])
